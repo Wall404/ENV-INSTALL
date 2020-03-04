@@ -9,22 +9,12 @@ echo -e "\e[34m Install Docker \e[39m"
 apt install docker.io -y
 systemctl enable docker
 
-# echo -e "\e[34m Install GO \e[39m"
-# wget https://dl.google.com/go/go1.14.linux-amd64.tar.gz
-# tar -C -xzf go1.14.linux-amd64.tar.gz
-# export PATH=$PATH:/usr/local/go/bin
-
-# sudo apt install golang-go
-
 echo -e "\e[34m Install Kind \e[39m"
-# curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-$(uname)-amd64
-# chmod +x ./kind
-# mv ./kind /some-dir-in-your-PATH/kind
+
 git clone https://github.com/kubernetes-sigs/kind.git
-# cd kind && make build
 apt install make -y
 make -C ./kind build
-export PATH=$PATH:./bin/
+export PATH=$PATH:./kind/bin/
 
 
 echo -e "\e[34m Install Kubernetes \e[39m"
