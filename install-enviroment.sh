@@ -8,9 +8,11 @@ apt-get upgrade -y
 echo -e "\e[34m Install Docker \e[39m"
 apt install docker.io -y
 systemctl enable docker
+groupadd docker
+usermod -aG docker ${USER}
+su -s ${USER}
 
 echo -e "\e[34m Install Kind \e[39m"
-
 git clone https://github.com/kubernetes-sigs/kind.git
 apt install make -y
 make -C ./kind build
@@ -29,8 +31,8 @@ kubeadm version
 echo -e "\e[34m Disable swap memory \e[39m"
 swapoff -a
 
-echo -e "\e[34m Run deploy example \e[39m"
-sh example-deploy.sh
+# echo -e "\e[34m Run deploy example \e[39m"
+# sh example-deploy.sh
 
 
 # En caso de error con VirtualBox
