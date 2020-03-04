@@ -22,7 +22,8 @@ echo -e "\e[34m Install Kind \e[39m"
 # mv ./kind /some-dir-in-your-PATH/kind
 git clone https://github.com/kubernetes-sigs/kind.git
 # cd kind && make build
-make -C /kind build
+apt install make -y
+make -C ./kind build
 export PATH=$PATH:./bin/
 cd ..
 
