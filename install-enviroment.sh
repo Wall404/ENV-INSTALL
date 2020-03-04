@@ -21,8 +21,7 @@ echo -e "\e[34m Install Kind \e[39m"
 # chmod +x ./kind
 # mv ./kind /some-dir-in-your-PATH/kind
 git clone https://github.com/kubernetes-sigs/kind.git
-cd kind
-make build
+cd kind && make build
 export PATH=$PATH:./bin/
 cd ..
 
@@ -31,7 +30,7 @@ echo -e "\e[34m Install Kubernetes \e[39m"
 apt install curl -y
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add
 apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main" 
-apt install kubeadm
+apt install kubeadm -y
 
 echo -e "\e[34m Check kubeadm version \e[39m"
 kubeadm version
