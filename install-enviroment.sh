@@ -31,8 +31,8 @@ kubeadm version
 echo -e "\e[34m Disable swap memory \e[39m"
 swapoff -a
 
-# echo -e "\e[34m Run deploy example \e[39m"
-# sh example-deploy.sh
+echo -e "\e[34m Run deploy example \e[39m"
+sh example-deploy.sh
 
 
 # En caso de error con VirtualBox
