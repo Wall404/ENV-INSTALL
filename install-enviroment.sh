@@ -16,7 +16,7 @@ echo -e "\e[34m Install Kind \e[39m"
 git clone https://github.com/kubernetes-sigs/kind.git
 apt install make -y
 make -C ./kind build
-export PATH=$PATH:./kind/bin/
+echo export PATH=$PATH:./kind/bin/
 
 
 echo -e "\e[34m Install Kubernetes \e[39m"
