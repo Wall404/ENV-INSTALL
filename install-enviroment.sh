@@ -10,13 +10,13 @@ apt install docker.io -y
 systemctl enable docker
 groupadd docker
 usermod -aG docker ${USER}
-su -s ${USER}
+# su -s ${USER}
 
 echo -e "\e[34m Install Kind \e[39m"
-git clone https://github.com/kubernetes-sigs/kind.git
+git clone https://github.com/kubernetes-sigs/kind.git /$HOME/kind
 apt install make -y
 make -C ./kind build
-echo export PATH=$PATH:./kind/bin/
+echo export PATH=$PATH:/$HOME/kind/bin/
 
 
 echo -e "\e[34m Install Kubernetes \e[39m"
