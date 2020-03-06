@@ -17,6 +17,8 @@ git clone https://github.com/kubernetes-sigs/kind.git $HOME/kind
 apt install make -y
 make -C $HOME/kind build
 # export PATH=$PATH:$HOME/kind/bin/
+
+echo -e "\e[34m Run python file \e[39m"
 python3 pathsetter.py
 
 
