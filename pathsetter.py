@@ -5,7 +5,9 @@ import subprocess
 # cmd = "export PATH=$PATH:$HOME/kind/bin/"
 # os.system(cmd)
 
-p = subprocess.call(["export", "PATH=$PATH:$HOME/kind/bin/"])
-output, err = p.communicate()
-print(output)
-print("export done")
+# p = subprocess.call(["export", "PATH=$PATH:$HOME/kind/bin/"])
+# output, err = p.communicate()
+# print(output)
+# print("export done")
+
+print(os.environ('PATH'))
