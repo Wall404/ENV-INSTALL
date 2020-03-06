@@ -15,7 +15,7 @@ new_path = home + "/kind/bin/"
 
 print('new path' + new_path)
 
-os.environ['PATH'] = old_path.join(new_path)
+os.environ['PATH'] = old_path + new_path
 
 # cmd = "export PATH=$PATH:$HOME/kind/bin/"
 # os.system(cmd)
