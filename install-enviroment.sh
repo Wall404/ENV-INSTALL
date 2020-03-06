@@ -19,7 +19,7 @@ make -C $HOME/kind build
 # export PATH=$PATH:$HOME/kind/bin/
 
 echo -e "\e[34m Run python file \e[39m"
-python3 pathsetter.py
+python3 ./pathsetter.py
 
 
 echo -e "\e[34m Install Kubernetes \e[39m"
