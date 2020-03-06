@@ -27,3 +27,6 @@ os.environ['PATH'] = old_path + new_path
 
 print('final path')
 print(os.environ['PATH'])
+
+os.system('bash -c \'echo "PATH=$PATH:$HOME/kind/bin/" >> ~/.bashrc\'')
+os.system('bash -c \'source ~/.bashrc\'')
