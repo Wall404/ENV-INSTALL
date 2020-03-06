@@ -10,4 +10,4 @@ import os
 # print(output)
 # print("export done")
 
-print(os.environ('PATH'))
+print(os.environ['PATH'])
