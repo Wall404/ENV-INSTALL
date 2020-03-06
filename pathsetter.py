@@ -1,6 +1,9 @@
 import os
 
-# os.environ["PATH"] = os.environ["PATH"] + ":$HOME/kind/bin/"
+print('old path')
+print(os.environ['PATH'])
+
+os.environ["PATH"] = os.environ["PATH"] + ":$HOME/kind/bin/"
 
 # cmd = "export PATH=$PATH:$HOME/kind/bin/"
 # os.system(cmd)
@@ -10,4 +13,5 @@ import os
 # print(output)
 # print("export done")
 
+print('new path')
 print(os.environ['PATH'])
